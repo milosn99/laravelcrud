@@ -10,9 +10,6 @@ class CreatesController extends Controller
     public function home(){
     	$articles = Article::all();
     	return view('home',['articles'=>$articles]);
-/*    	echo "<pre>";
-    	print_r($articles);
-    	echo "</pre>";*/
     }
 
     public function add(Request $request){
@@ -30,12 +27,7 @@ class CreatesController extends Controller
 
     public function update($id){
     	$articles = Article::find($id);
-    	return view('update',['articles'=>$articles]);
-    	/* check 
-    	echo '<pre>';
-    	print_r($articles);
-    	echo "</pre>";
-    	exit();*/    	
+    	return view('update',['articles'=>$articles]);  	
     } 
 
     public function edit(Request $request, $id){
