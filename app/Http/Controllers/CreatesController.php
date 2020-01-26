@@ -25,7 +25,7 @@ class CreatesController extends Controller
     	$articles->title = $request->input('title');
     	$articles->description = $request->input('description');
     	$articles->save();
-    	return redirect('/')->with('info','Article Saved Successfully!');
+    	return redirect('/')->with('info','Drva uspešno dodata');
     } 
 
     public function update($id){
@@ -49,7 +49,7 @@ class CreatesController extends Controller
     	);
     	Article::where('id',$id)
     	->update($data);
-    	return redirect('/')->with('info','Article Updated Successfully!');
+    	return redirect('/')->with('info','Drva uspešno izmenjena!');
     } 
 
     public function read($id){
@@ -61,6 +61,6 @@ class CreatesController extends Controller
     public function delete($id){
 		Article::where('id',$id)
 		->delete();
-		return redirect('/')->with('info','Article Deleted Successfully!');
+		return redirect('/')->with('info','Drva uspešno obrisana!');
     } 
 }
